@@ -44,7 +44,7 @@ function create(pgPool, createSessionStore = () => null) {
   }
 
   app.use(session(sessionConfig));
-  app.use(cors({ origin: true, credentials: true }));
+  app.use(cors({ origin: process.env.REACT_APP_URL || true, credentials: true }));
   app.use(express.json());
 
   app.use((req, _, next) => {
