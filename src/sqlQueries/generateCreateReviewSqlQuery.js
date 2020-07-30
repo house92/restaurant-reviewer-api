@@ -14,7 +14,7 @@ function generateCreateReviewSqlQuery(reviewData) {
       ${reviewData.rating},
       ${reviewData.comment},
       ${reviewData.visitDate}
-    ) RETURNING restaurant_id, user_id, rating, comment, visit_date;
+    ) RETURNING id, restaurant_id, user_id, rating, comment, visit_date;
   `;
 }
 
