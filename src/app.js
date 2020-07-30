@@ -34,7 +34,7 @@ function create(pgPool, createSessionStore = () => null) {
     resave: false,
     saveUninitialized: true,
     cookie: {
-      sameSite: false,
+      sameSite: 'none',
       httpOnly: true,
     },
   };
